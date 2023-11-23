@@ -1,20 +1,40 @@
 /* SHYAMAL KAKADIA  STUDENT ID:8940119 */
 
+html
+{
+  font: normal normal normal 20px/1.5, Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+
 body{
     font: normal normal normal 12px/1.5 Verdana ,Arial, Helvetica, sans-serif;
     height: 100vh;
     width: 100vw;
     background-color: hwb(200 12% 49% / 0.7);
+    display: flex;
+    flex-direction: column;
 }
 
 h1
 {
-  color: blueviolet; 
-  font-size: 30px;
+  color: burlywood; 
+  font-size: 2.5rem;
 }
 h2{
     font-size: 2rem;
     color: #409;
+}
+
+header
+{
+  background-color: hsl(336, 85%, 45%);
+  flex:1 10%;
+}
+
+nav
+{
+  flex:1 5%;
 }
 nav ul li
 {
@@ -28,7 +48,7 @@ nav ul li a
   color:indigo;
   background-color: cornsilk;
   text-decoration: none;
-  padding: 4px;
+  padding: 1em;
 }
 
 nav ul li a:hover
@@ -38,11 +58,19 @@ nav ul li a:hover
   background-color: indigo;
 }
 
+section
+{
+  display:flex;
+  flex-direction: row;
+  flex: 4 8%;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
 main {
-    float: left;
-    width: 65vw;
+    flex: 201 70%;
     background-color: hsl(130, 39%, 58%);
-    height: auto;
   }
  
 aside{
@@ -69,7 +97,7 @@ aside{
   }
 
 footer{
-    clear:both;
+    flex: 1 5%;
     background-color: hsl(60, 100%, 50%);
   }
 
@@ -123,10 +151,42 @@ footer{
     border:none;
   }
 
-header{
-    background-color: hsl(150, 25%, 23%);
-   }
+  #gallery
+  {
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  figure{
+    border: 2px solid black;
+  }
+
+  img{
+    width:80%;
+    height:80%;
+  }
 
 footer p {
     font-size: 0.75em;
+}
+
+@media (max-width: 1200px)
+{
+  html{
+    font-size: 15px;
+  }
+
+}
+
+@media(max-width: 600px)
+{
+  html{
+    font-size: 10px;
+  }
+  #gallery{
+    grid-template-columns:1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+
+  }
 }
